@@ -21,6 +21,6 @@ Então /^devo ver "([^"]*)"$/ do |imc|
   page.should have_content imc
 end
 
-Então /^sou avisado que estou com "([^"]*)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Então /^sou avisado que estou com "([^"]*)"$/ do |mensagem|
+  page.should have_content mensagem
 end
