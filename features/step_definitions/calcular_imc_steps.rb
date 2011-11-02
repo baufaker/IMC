@@ -1,23 +1,24 @@
 #encoding: utf-8
 
 Dado /^que eu estou na pagina de formulario$/ do
-  pending # express the regexp above with the code you wish you had
+  visit '/'
 end
 
-Quando /^eu informo minha altura com "([^"]*)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Quando /^eu informo minha altura com "([^"]*)"$/ do |altura|
+  fill_in 'altura', :with => altura
 end
 
-Quando /^meu peso com "([^"]*)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Quando /^meu peso com "([^"]*)"$/ do |peso|
+  fill_in 'peso', :with => peso
+end
+  
+
+Quando /^clico em "([^"]*)"$/ do |botao|
+  click_button(botao)
 end
 
-Quando /^clico em "([^"]*)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Então /^devo ver "([^"]*)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Então /^devo ver "([^"]*)"$/ do |imc|
+  page.should have_content imc
 end
 
 Então /^sou avisado que estou com "([^"]*)"$/ do |arg1|

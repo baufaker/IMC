@@ -1,4 +1,8 @@
 IMC::Application.routes.draw do
+  
+  match '/' => 'calculadora_imc#index', :as => :calculadora
+  match '/resultado' => 'calculadora_imc#resultado', :as => :resultado
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
